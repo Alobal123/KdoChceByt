@@ -1,0 +1,11 @@
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Debug\KdoChceByt.exe.config
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Debug\KdoChceByt.exe
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Debug\KdoChceByt.pdb
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.csprojAssemblyReference.cache
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.Form1.resources
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.Properties.Resources.resources
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.csproj.GenerateResource.cache
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.csproj.CoreCompileInputs.cache
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.exe
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.pdb
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.QuestionScreen.resources
