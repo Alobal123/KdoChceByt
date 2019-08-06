@@ -8,4 +8,9 @@ C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.csproj.Ge
 C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.csproj.CoreCompileInputs.cache
 C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.exe
 C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.pdb
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Debug\Interop.WMPLib.dll
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\Interop.WMPLib.dll
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.csproj.ResolveComReference.cache
 C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Debug\KdoChceByt.QuestionScreen.resources

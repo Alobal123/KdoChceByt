@@ -19,7 +19,8 @@ namespace KdoChceByt
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(game));
+            Application.Run( new QuestionScreen(game));
+          
         }
     }
 }

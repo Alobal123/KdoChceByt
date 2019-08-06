@@ -10,35 +10,49 @@ using System.Windows.Forms;
 
 namespace KdoChceByt
 {
+
+
+
     public partial class QuestionScreen : Form
     {
         private Game game;
         private bool blick = true;
         private List<AnswerButton> answerButtons = new List<AnswerButton>();
+        private static string[] letters = {"A: ", "B: ", "C: ", "D: " };
+        private ScreenState state;
+        private Player player = new Player();
+  
+
+        public enum ScreenState
+        {
+            start,
+            questionDisplay,
+            playing,
+            ending,
+        }
 
         internal QuestionScreen(Game game)
         {
+            this.state = ScreenState.start;
             this.game = game;
-            
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
             InitializeComponent();
             this.BackColor = Color.FromArgb(32, 14, 88);
-
-
-            ScoreLabel.Text = game.getTextScore();
-            Question currentQuestion = game.GetQuestion();
-            for (int i = 0; i < currentQuestion.Answers.Length; i++)
-            {
-                AnswerButton answerButton = new AnswerButton(this);
-                QuestionPanel.Controls.Add(answerButton);
-                answerButtons.Add(answerButton);    
-            }
-    
-
-            ShowQuestion(true);
+            ScoreLabel.Text = game.getTextScore();   
         }
 
+        private void Reset()
+        {
+            foreach (AnswerButton butt in answerButtons)
+            {
+                QuestionPanel.Controls.Remove(butt);
+                butt.Dispose();
+            }
+            QuestionLabel.Text = "";
+            this.state = ScreenState.start;
+            this.answerButtons = new List<AnswerButton>();
+        }
 
         internal void ShowQuestion(bool reset)
         {
@@ -46,12 +60,11 @@ namespace KdoChceByt
             timer1.Stop();
             if (currentQuestion != null)
             {
-                QuestionLabel.Text = currentQuestion.Text;
-                for (int i = 0; i < currentQuestion.Answers.Length; i++)
+                for (int i = 0; i < answerButtons.Count; i++)
                 {
                     AnswerButton button = answerButtons[i];
                     if (button.state != AnswerButtonState.Deactivated || reset)
-                        button.Reset(currentQuestion.Answers[i], currentQuestion.isRight(i));
+                        button.Reset(letters[i] + currentQuestion.Answers[i], currentQuestion.isRight(i));
                 }
             }
             else
@@ -59,12 +72,6 @@ namespace KdoChceByt
                 MessageBox.Show("The End!");
                 this.Dispose();
             }
-        }
-
-        internal void NextQuestion(bool wasRight)
-        {
-            game.NextQuestion(wasRight);
-            ScoreLabel.Text = game.getTextScore();
         }
 
         private void QuestionPanel_Resize(object sender, EventArgs e)
@@ -87,46 +94,49 @@ namespace KdoChceByt
                     answerButtons[i].Text = "";
                 }
             }
-
             ((Control)sender).Dispose();
         }
 
         public void AnswerClick(object sender, EventArgs e)
         {
+            if (state == ScreenState.playing) { 
             AnswerButton button = (AnswerButton)sender;
-            switch (button.state)
-            {
-                case AnswerButtonState.Default:
-                    ShowQuestion(false);
-                    button.BackColor = Color.Orange;
-                    button.state = AnswerButtonState.Selected;
-                    break;
-                case AnswerButtonState.Selected:
-                    if (button.isRight)
-                    {
-                        button.state = AnswerButtonState.Right;
-                        timer1.Start();
-                    }
-                    else
-                    {
-                        button.state = AnswerButtonState.Wrong;
-                        timer1.Start();
-                    }
-                    NextQuestion(button.isRight);
+                switch (button.state)
+                {
+                    case AnswerButtonState.Default:
+                        ShowQuestion(false);
+                        button.BackColor = Color.Orange;
+                        button.state = AnswerButtonState.Selected;
+                        break;
+                    case AnswerButtonState.Selected:
+                        if (button.isRight)
+                        {
+                            player.Play(@"sounds/correct.mp3");
+                            button.state = AnswerButtonState.Right;
+                            timer1.Start();
+                            
 
-                    break;
-                case AnswerButtonState.Right:
-                    
-                    ShowQuestion(true);
-                    break;
-                case AnswerButtonState.Wrong:
-                    
-                    ShowQuestion(true);
-                    break;
-                case AnswerButtonState.Deactivated:
-                    break;
-                default:
-                    break;
+                        }
+                        else
+                        {
+                            
+                            player.Play(@"sounds/wrong.mp3");
+                            button.state = AnswerButtonState.Wrong;
+                            timer1.Start();
+                        }
+                        game.raiseScore(button.isRight);
+                        this.state = ScreenState.ending;
+                        ScoreLabel.Text = game.getTextScore();
+                        break;
+                    case AnswerButtonState.Right:
+                        break;
+                    case AnswerButtonState.Wrong:
+                        break;
+                    case AnswerButtonState.Deactivated:
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
@@ -137,7 +147,6 @@ namespace KdoChceByt
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             for (int i = 0; i < answerButtons.Count; i++)
             {
                 AnswerButton button = answerButtons[i];
@@ -152,10 +161,66 @@ namespace KdoChceByt
                     if (button.state == AnswerButtonState.Wrong)
                         button.BackColor = Color.Red;
                 }
-                    
-                
             }
             blick = !blick;
+        }
+
+        private void QuestionScreen_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode != Keys.Space)
+                return;
+            else
+            {
+                
+                switch (state)
+                {
+                    case ScreenState.start:
+                        player.Play(@"sounds/theme.mp3");
+                        this.state = ScreenState.questionDisplay;
+                        Question currentQuestion = game.GetQuestion();
+                        QuestionLabel.Text = currentQuestion.Text;
+                        QuestionPanel_Resize(null, null);
+                        break;
+                    case ScreenState.questionDisplay:
+                        if (answerButtons.Count < 4)
+                        {
+                            AnswerButton answerButton = new AnswerButton(this);
+                            QuestionPanel.Controls.Add(answerButton);
+                            answerButtons.Add(answerButton);
+                            answerButton.KeyDown += new KeyEventHandler(QuestionScreen_KeyDown);
+                            ShowQuestion(false);
+                        }
+                        if (answerButtons.Count == 4)
+                        {
+                            this.state = ScreenState.playing;
+                        }
+                        break;
+                    case ScreenState.playing:
+                        break;
+                    case ScreenState.ending:
+                        game.NextQuestion();
+                        Reset();
+                        this.Focus();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+
+    }
+    public class Player
+    {
+        WMPLib.WindowsMediaPlayer  wp = new WMPLib.WindowsMediaPlayer();
+
+
+        public void Play(string url)
+        {
+            wp.controls.stop();
+            wp.URL = url;
+            wp.controls.play();
         }
     }
 }

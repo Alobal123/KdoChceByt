@@ -56,12 +56,16 @@ namespace KdoChceByt
 
         }
 
-        public void NextQuestion(bool wasRight)
+        public void NextQuestion()
         {
-            if (wasRight){
-                Score*=2;
-            }
             QuestionIndex++;
+        }
+        public void raiseScore(bool wasRight)
+        {
+            if (wasRight)
+            {
+                Score *= 2;
+            }
         }
 
     }

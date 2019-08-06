@@ -27,8 +27,7 @@ namespace KdoChceByt
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            QuestionScreen form = new QuestionScreen(game);
-            form.ShowDialog();
+
         }
     }
 }
