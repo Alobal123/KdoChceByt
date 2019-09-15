@@ -1,0 +1,48 @@
+Jakou má nevìsta velikost boty?
+37;38;39;40
+0 2
+0
+Kdo umí nejlíp vaøit?
+nevìsta;matka nevìsty;svìdek nevìsty;svìdek ženicha
+1 2
+0
+Jméno panenky.
+4;5;6;7
+1 2
+1
+Kdo je ze všech nejkrásnìjší,
+nevìsta;nevìsta;nevìsta;nevìsta
+1 2
+0 1 2 3
+Nìco z farmacie.
+4;5;6;7
+1 2
+1
+Nìco z pána prstenù.
+4;5;6;7
+1 2
+1
+Kolik by chtìl mít ženich dìtí?
+3;4;5;6
+1 2
+1
+Nìco z pána prstenù 2.
+3;4;5;6
+1 2
+1
+Ženichova oblíbená znaèka deodorantu?
+3;4;5;6
+1 2
+0
+Èím chtìl být když byl malý?
+3;4;5;6
+1 2
+0
+Nìco na deskovky.
+3;4;5;6
+1 2
+0
+Jak moc má rád ženich nevìstu?
+moc;nejvíc;nejvíc;nejvíc
+1 2
+0

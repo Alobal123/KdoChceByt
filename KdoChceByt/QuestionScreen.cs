@@ -104,6 +104,7 @@ namespace KdoChceByt
                 switch (button.state)
                 {
                     case AnswerButtonState.Default:
+                        player.Play(@"sounds/theme.mp3");
                         ShowQuestion(false);
                         button.BackColor = Color.Orange;
                         button.state = AnswerButtonState.Selected;
@@ -114,12 +115,9 @@ namespace KdoChceByt
                             player.Play(@"sounds/correct.mp3");
                             button.state = AnswerButtonState.Right;
                             timer1.Start();
-                            
-
                         }
                         else
                         {
-                            
                             player.Play(@"sounds/wrong.mp3");
                             button.state = AnswerButtonState.Wrong;
                             timer1.Start();
@@ -176,7 +174,7 @@ namespace KdoChceByt
                 switch (state)
                 {
                     case ScreenState.start:
-                        player.Play(@"sounds/theme.mp3");
+                        player.Play(@"sounds/letsplay.mp3");
                         this.state = ScreenState.questionDisplay;
                         Question currentQuestion = game.GetQuestion();
                         QuestionLabel.Text = currentQuestion.Text;
@@ -213,14 +211,15 @@ namespace KdoChceByt
     }
     public class Player
     {
-        WMPLib.WindowsMediaPlayer  wp = new WMPLib.WindowsMediaPlayer();
-
-
+        WMPLib.WindowsMediaPlayer wp = new WMPLib.WindowsMediaPlayer();
         public void Play(string url)
         {
-            wp.controls.stop();
             wp.URL = url;
             wp.controls.play();
+        }
+        public void Stop()
+        {
+            wp.controls.stop();
         }
     }
 }
