@@ -11,8 +11,6 @@ using System.Windows.Forms;
 namespace KdoChceByt
 {
 
-
-
     public partial class QuestionScreen : Form
     {
         private Game game;
@@ -28,7 +26,10 @@ namespace KdoChceByt
             start,
             questionDisplay,
             playing,
+            pause,
             ending,
+            epilog
+            
         }
 
         internal QuestionScreen(Game game)
@@ -39,7 +40,8 @@ namespace KdoChceByt
             this.FormBorderStyle = FormBorderStyle.None;
             InitializeComponent();
             this.BackColor = Color.FromArgb(32, 14, 88);
-            ScoreLabel.Text = game.getTextScore();   
+            ScoreLabel.Text = game.getTextScore();
+
         }
 
         private void Reset()
@@ -51,6 +53,7 @@ namespace KdoChceByt
             }
             QuestionLabel.Text = "";
             this.state = ScreenState.start;
+    
             this.answerButtons = new List<AnswerButton>();
         }
 
@@ -76,6 +79,9 @@ namespace KdoChceByt
 
         private void QuestionPanel_Resize(object sender, EventArgs e)
         {
+      
+            logo.Width = ClientRectangle.Width;
+            logo.Height = ClientRectangle.Height;
             int x = QuestionPanel.Width / 2 - QuestionLabel.Width / 2;
             int y = this.Height - QuestionPanel.Height - QuestionLabel.Height*2;
             QuestionLabel.Location = new Point(x, y);
@@ -108,23 +114,31 @@ namespace KdoChceByt
                         ShowQuestion(false);
                         button.BackColor = Color.Orange;
                         button.state = AnswerButtonState.Selected;
+                        
                         break;
                     case AnswerButtonState.Selected:
+                        this.state = ScreenState.ending;
                         if (button.isRight)
                         {
                             player.Play(@"sounds/correct.mp3");
                             button.state = AnswerButtonState.Right;
                             timer1.Start();
+                            game.raiseScore(button.isRight);
+                            ScoreLabel.Text = game.getTextScore();
+                            game.NextQuestion();
                         }
                         else
                         {
+                            if (game.QuestionIndex >= 6)
+                                this.state = ScreenState.epilog;
+                            else
+                                game.QuestionIndex = 6;
+
                             player.Play(@"sounds/wrong.mp3");
                             button.state = AnswerButtonState.Wrong;
                             timer1.Start();
                         }
-                        game.raiseScore(button.isRight);
-                        this.state = ScreenState.ending;
-                        ScoreLabel.Text = game.getTextScore();
+                        
                         break;
                     case AnswerButtonState.Right:
                         break;
@@ -170,13 +184,22 @@ namespace KdoChceByt
                 return;
             else
             {
-                
                 switch (state)
                 {
                     case ScreenState.start:
-                        player.Play(@"sounds/letsplay.mp3");
+                        this.tableLayoutPanel1.Visible = true;
+                        this.ScoreLabel.Visible = true;
                         this.state = ScreenState.questionDisplay;
+
+                        player.Play(@"sounds/letsplay.mp3");
+                        logo.Visible = false;
                         Question currentQuestion = game.GetQuestion();
+                        if (currentQuestion == null)
+                        {
+                            this.state = ScreenState.epilog;
+                            QuestionScreen_KeyDown(sender, e);
+                            return;
+                        }
                         QuestionLabel.Text = currentQuestion.Text;
                         QuestionPanel_Resize(null, null);
                         break;
@@ -197,9 +220,25 @@ namespace KdoChceByt
                     case ScreenState.playing:
                         break;
                     case ScreenState.ending:
-                        game.NextQuestion();
+                        this.tableLayoutPanel1.Visible = false;
+                        this.ScoreLabel.Visible = false;
+                        this.logo.Visible = true;
+                        this.state = ScreenState.pause;
+                        break;
+                    case ScreenState.pause:
                         Reset();
                         this.Focus();
+                        break;
+                    case ScreenState.epilog:
+                        Reset();
+                        this.state = ScreenState.epilog;
+                        this.Focus();
+                        this.tableLayoutPanel1.Visible = false;
+                        ScoreLabel.Anchor = AnchorStyles.None;
+                        ScoreLabel.Location= new Point(100,400);
+                        ScoreLabel.Font = new Font(ScoreLabel.Font.FontFamily, 50, ScoreLabel.Font.Style);
+                        ScoreLabel.Text = "Gratulujeme! " + game.getTextScore() + "!";
+                        ScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
                         break;
                     default:
                         break;

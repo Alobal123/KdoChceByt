@@ -9,7 +9,7 @@ namespace KdoChceByt
     class Game
     {
         private List<Question> Questions = new List<Question>();
-        private int QuestionIndex = 0;
+        public int QuestionIndex = 0;
         private int Score = 1;
 
         public Game (string Path)

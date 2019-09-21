@@ -6,8 +6,8 @@ Kdo umí nejlíp vaøit?
 nevìsta;matka nevìsty;svìdek nevìsty;svìdek ženicha
 1 2
 0
-Jméno panenky.
-4;5;6;7
+Které z tìchto jmen nepatøilo hraèce nevìsty.
+	4;Uschlá švestka;Moje Gusto;Pipi-kuøák
 1 2
 1
 Kdo je ze všech nejkrásnìjší,

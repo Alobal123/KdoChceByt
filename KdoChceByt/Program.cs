@@ -15,7 +15,7 @@ namespace KdoChceByt
         static void Main()
         {
 
-            Game game = new Game("C:\\Users\\miros\\source\\repos\\questions.txt");
+            Game game = new Game("../../../questions.txt");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
