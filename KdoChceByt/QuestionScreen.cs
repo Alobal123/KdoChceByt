@@ -100,7 +100,7 @@ namespace KdoChceByt
                     answerButtons[i].Text = "";
                 }
             }
-            ((Control)sender).Dispose();
+            ((Control)sender).Visible=false;
         }
 
         public void AnswerClick(object sender, EventArgs e)
@@ -126,13 +126,25 @@ namespace KdoChceByt
                             game.raiseScore(button.isRight);
                             ScoreLabel.Text = game.getTextScore();
                             game.NextQuestion();
+                            if (game.QuestionIndex == 6)
+                            {
+                                pictureBox1.Visible = true;
+                                pictureBox2.Visible = true;
+                                pictureBox3.Visible = true;
+                            }
+;
                         }
                         else
                         {
                             if (game.QuestionIndex >= 6)
                                 this.state = ScreenState.epilog;
                             else
+                            {
+                                pictureBox1.Visible = true;
+                                pictureBox2.Visible = true;
+                                pictureBox3.Visible = true;
                                 game.QuestionIndex = 6;
+                            }
 
                             player.Play(@"sounds/wrong.mp3");
                             button.state = AnswerButtonState.Wrong;
@@ -154,7 +166,8 @@ namespace KdoChceByt
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ((Control)sender).Dispose();
+
+            ((Control)sender).Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

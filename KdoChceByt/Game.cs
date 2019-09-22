@@ -10,7 +10,7 @@ namespace KdoChceByt
     {
         private List<Question> Questions = new List<Question>();
         public int QuestionIndex = 0;
-        private int Score = 1;
+        private int Score = 0;
 
         public Game (string Path)
         {
@@ -64,7 +64,7 @@ namespace KdoChceByt
         {
             if (wasRight)
             {
-                Score *= 2;
+                Score += 5;
             }
         }
 

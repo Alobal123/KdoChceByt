@@ -177,7 +177,7 @@
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuestionScreen";
-            this.Text = "QuestionScreen";
+            this.Text = " ";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.QuestionScreen_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

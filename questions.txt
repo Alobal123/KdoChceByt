@@ -1,27 +1,27 @@
 Jakou má nevìsta velikost boty?
 37;38;39;40
-0 2
-0
+0 3
+2
 Kdo umí nejlíp vaøit?
 nevìsta;matka nevìsty;svìdek nevìsty;svìdek ženicha
+2 3
+1
+Které z tìchto jmen nepatøilo hraèce nevìsty.
+Dutý pižmoò;Uschlá švestka;Moje Gusto;Pipi-kuøák
 1 2
 0
-Které z tìchto jmen nepatøilo hraèce nevìsty.
-	4;Uschlá švestka;Moje Gusto;Pipi-kuøák
-1 2
-1
 Kdo je ze všech nejkrásnìjší,
 nevìsta;nevìsta;nevìsta;nevìsta
-1 2
+1 3
 0 1 2 3
-Nìco z farmacie.
-4;5;6;7
-1 2
-1
-Nìco z pána prstenù.
-4;5;6;7
-1 2
-1
+Který z tìchto léku bys podal dítìti s horeèkou?
+Endiaron;Acylpyrin;Panadol;Hypnogen
+0 3
+2
+Která je nejoblíbenìjší postava nevìsty z Pána Prstenù?
+Saruman;Aragorn;Gimli;Tom Bombadil
+0 2
+3
 Kolik by chtìl mít ženich dìtí?
 3;4;5;6
 1 2
