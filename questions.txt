@@ -22,19 +22,19 @@ Která je nejoblíbenìjší postava nevìsty z Pána Prstenù?
 Saruman;Aragorn;Gimli;Tom Bombadil
 0 2
 3
-Kolik by chtìl mít ženich dìtí?
-3;4;5;6
-1 2
-1
-Nìco z pána prstenù 2.
-3;4;5;6
-1 2
-1
-Ženichova oblíbená znaèka deodorantu?
-3;4;5;6
-1 2
-0
 Èím chtìl být když byl malý?
+Popeláø;Voják;Instalatér;Autonávrháø
+0 2
+3
+Jak moc má rád ženich nevìstu?
+moc;nejvíc;nejvíc;nejvíc
+1 2
+0 1 2 3
+Kolik by chtìl mít ženich dìtí?
+2;4;6;8
+0 3
+2
+Ženichova oblíbená znaèka deodorantu?
 3;4;5;6
 1 2
 0
@@ -42,7 +42,7 @@ Nìco na deskovky.
 3;4;5;6
 1 2
 0
-Jak moc má rád ženich nevìstu?
-moc;nejvíc;nejvíc;nejvíc
-1 2
-0
+Která je nejoblíbenìjší postava ženicha z Pána Prstenù?
+Frodo;Pipin;Aragorn;Stromovous
+0 3
+1
