@@ -2,47 +2,39 @@ Jakou má nevìsta velikost boty?
 37;38;39;40
 0 3
 2
+Kdo je ze všech nejkrásnìjší?
+nevìsta;nevìsta;nevìsta;nevìsta
+1 3
+0 1 2 3
 Kdo umí nejlíp vaøit?
 nevìsta;matka nevìsty;svìdek nevìsty;svìdek ženicha
 2 3
 1
-Které z tìchto jmen nepatøilo hraèce nevìsty.
-Dutý pižmoò;Uschlá švestka;Moje Gusto;Pipi-kuøák
+Které z tìchto jmen nepatøilo hraèce nevìsty:
+Dutý Pižmoò;Uschlá Švestka;Moje Gusto;Pipi Kuøák
 1 2
 0
-Kdo je ze všech nejkrásnìjší,
-nevìsta;nevìsta;nevìsta;nevìsta
-1 3
-0 1 2 3
 Který z tìchto léku bys podal dítìti s horeèkou?
-Endiaron;Acylpyrin;Panadol;Hypnogen
+endiaron;acylpyrin;panadol;hypnogen
 0 3
 2
-Která je nejoblíbenìjší postava nevìsty z Pána Prstenù?
-Saruman;Aragorn;Gimli;Tom Bombadil
-0 2
-3
 Èím chtìl být když byl malý?
-Popeláø;Voják;Instalatér;Autonávrháø
+popeláø;voják;rytíø;autonávrháø
 0 2
 3
 Jak moc má rád ženich nevìstu?
-moc;nejvíc;nejvíc;nejvíc
+moc a moc;úplnì nejvíc;celým srdcem;jako sùl
 1 2
 0 1 2 3
 Kolik by chtìl mít ženich dìtí?
 2;4;6;8
 0 3
 2
-Ženichova oblíbená znaèka deodorantu?
-3;4;5;6
-1 2
-0
-Nìco na deskovky.
-3;4;5;6
-1 2
-0
-Která je nejoblíbenìjší postava ženicha z Pána Prstenù?
-Frodo;Pipin;Aragorn;Stromovous
-0 3
+Ve høe safari bar, které zvíøe obrací celou frontu?
+had;lachtan;opice;chameleon
+2 3
 1
+Na co bys použila Diavu?
+Nábytek;Toaletu;Okna;Dítì
+1 2
+0
