@@ -45,7 +45,9 @@ namespace KdoChceByt
 
         public string getTextScore()
         {
-            if (Score == 1)
+            if (Score == 0)
+                return "Garantujeme 0 šťastných let";
+            else if (Score == 1)
                 return "Garantujeme 1 šťastný rok";
             else if (Score <= 4)
             {
@@ -66,6 +68,10 @@ namespace KdoChceByt
             {
                 Score += 5;
             }
+        }
+        public int getQuestionCount()
+        {
+            return Questions.Count;
         }
 
     }

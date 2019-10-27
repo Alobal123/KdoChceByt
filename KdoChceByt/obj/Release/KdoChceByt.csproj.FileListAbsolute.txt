@@ -1,0 +1,15 @@
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Release\KdoChceByt.exe.config
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Release\KdoChceByt.exe
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Release\KdoChceByt.pdb
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Release\Interop.WMPLib.dll
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\bin\Release\AxInterop.WMPLib.dll
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\KdoChceByt.csprojAssemblyReference.cache
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\Interop.WMPLib.dll
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\AxInterop.WMPLib.dll
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\KdoChceByt.csproj.ResolveComReference.cache
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\KdoChceByt.Properties.Resources.resources
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\KdoChceByt.QuestionScreen.resources
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\KdoChceByt.csproj.GenerateResource.cache
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\KdoChceByt.csproj.CoreCompileInputs.cache
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\KdoChceByt.exe
+C:\Users\miros\source\repos\KdoChceByt\KdoChceByt\obj\Release\KdoChceByt.pdb

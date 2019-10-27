@@ -126,7 +126,7 @@ namespace KdoChceByt
                             game.raiseScore(button.isRight);
                             ScoreLabel.Text = game.getTextScore();
                             game.NextQuestion();
-                            if (game.QuestionIndex == 6)
+                            if (game.QuestionIndex == game.getQuestionCount()/2)
                             {
                                 pictureBox1.Visible = true;
                                 pictureBox2.Visible = true;
@@ -136,14 +136,14 @@ namespace KdoChceByt
                         }
                         else
                         {
-                            if (game.QuestionIndex >= 6)
+                            if (game.QuestionIndex >= game.getQuestionCount() / 2)
                                 this.state = ScreenState.epilog;
                             else
                             {
                                 pictureBox1.Visible = true;
                                 pictureBox2.Visible = true;
                                 pictureBox3.Visible = true;
-                                game.QuestionIndex = 6;
+                                game.QuestionIndex = game.getQuestionCount() / 2;
                             }
 
                             player.Play(@"sounds/wrong.mp3");

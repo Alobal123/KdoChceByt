@@ -15,7 +15,7 @@ namespace KdoChceByt
         static void Main()
         {
 
-            Game game = new Game("../../../questions.txt");
+            Game game = new Game("questions.txt");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

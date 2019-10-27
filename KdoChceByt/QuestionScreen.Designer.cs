@@ -53,10 +53,9 @@
             this.QuestionLabel.Cursor = System.Windows.Forms.Cursors.Default;
             this.QuestionLabel.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.QuestionLabel.ForeColor = System.Drawing.Color.White;
-            this.QuestionLabel.Location = new System.Drawing.Point(415, 108);
-            this.QuestionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.QuestionLabel.Location = new System.Drawing.Point(311, 88);
             this.QuestionLabel.Name = "QuestionLabel";
-            this.QuestionLabel.Size = new System.Drawing.Size(0, 93);
+            this.QuestionLabel.Size = new System.Drawing.Size(0, 75);
             this.QuestionLabel.TabIndex = 1;
             this.QuestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -66,10 +65,10 @@
             this.ScoreLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.ScoreLabel.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ScoreLabel.ForeColor = System.Drawing.Color.White;
-            this.ScoreLabel.Location = new System.Drawing.Point(1465, 0);
-            this.ScoreLabel.Margin = new System.Windows.Forms.Padding(50);
+            this.ScoreLabel.Location = new System.Drawing.Point(1089, 0);
+            this.ScoreLabel.Margin = new System.Windows.Forms.Padding(38, 41, 38, 41);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(145, 51);
+            this.ScoreLabel.Size = new System.Drawing.Size(114, 41);
             this.ScoreLabel.TabIndex = 2;
             this.ScoreLabel.Text = "label1";
             this.ScoreLabel.Visible = false;
@@ -83,13 +82,12 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(31, 59);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 48);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 123);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Visible = false;
             // 
@@ -97,10 +95,9 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 115);
+            this.pictureBox1.Size = new System.Drawing.Size(93, 93);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -109,10 +106,9 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(270, 4);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(203, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(125, 115);
+            this.pictureBox3.Size = new System.Drawing.Size(94, 93);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -121,10 +117,9 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(137, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(103, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(124, 115);
+            this.pictureBox2.Size = new System.Drawing.Size(93, 93);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -140,14 +135,14 @@
             this.QuestionPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.QuestionPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.QuestionPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.QuestionPanel.Location = new System.Drawing.Point(0, 148);
-            this.QuestionPanel.Margin = new System.Windows.Forms.Padding(27, 25, 27, 123);
+            this.QuestionPanel.Location = new System.Drawing.Point(0, 120);
+            this.QuestionPanel.Margin = new System.Windows.Forms.Padding(20, 20, 20, 100);
             this.QuestionPanel.Name = "QuestionPanel";
-            this.QuestionPanel.Padding = new System.Windows.Forms.Padding(40, 37, 40, 37);
+            this.QuestionPanel.Padding = new System.Windows.Forms.Padding(30, 30, 30, 30);
             this.QuestionPanel.RowCount = 2;
             this.QuestionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.QuestionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.QuestionPanel.Size = new System.Drawing.Size(1610, 615);
+            this.QuestionPanel.Size = new System.Drawing.Size(1203, 500);
             this.QuestionPanel.TabIndex = 0;
             this.QuestionPanel.Resize += new System.EventHandler(this.QuestionPanel_Resize);
             // 
@@ -156,8 +151,9 @@
             this.logo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
             this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(2000, 2000);
+            this.logo.Size = new System.Drawing.Size(1500, 1625);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 3;
             this.logo.TabStop = false;
@@ -165,17 +161,16 @@
             // 
             // QuestionScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1610, 763);
+            this.ClientSize = new System.Drawing.Size(1203, 620);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.ScoreLabel);
             this.Controls.Add(this.QuestionLabel);
             this.Controls.Add(this.QuestionPanel);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuestionScreen";
             this.Text = " ";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.QuestionScreen_KeyDown);
